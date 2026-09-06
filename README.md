@@ -3,7 +3,7 @@ A small but super fast way to search log files using regex.
 
 RElog lets you open a log file, view its contents, search it using regular expressions, and save the matching results to a separate file.
 
-It's particularly useful for large logs where manually searching through hundreds of thousands of lines would be annoying.
+For more information, click [here](HowTo.md)
 ## Features
 * Open and inspect log files
 * Search logs using regular expressions
@@ -83,6 +83,8 @@ RElog is designed to handle large log files.
 A large log containing hundreds of thousands of lines can still be processed quickly, although displaying extremely large files in a GUI can take significantly longer than the regex search itself.
 
 For very large files, the Qt text widgets may become the primary performance bottleneck.
+
+RElog has been tested on a 565,151 line log file which resulted in a top speed of about 56,500 lines per second.
 ## Downloads
 Only the Python script is available.
 
