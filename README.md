@@ -65,6 +65,7 @@ https?://\S+
 Click:
 
 **Save Filtered Output…**
+
 RElog saves the currently filtered results beside the original file using a `_REGEX.log` suffix.
 
 For example:
