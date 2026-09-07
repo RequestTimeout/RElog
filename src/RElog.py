@@ -235,12 +235,13 @@ class RElogUI(object):
             self.logViewOutput.clear()
             self.filteredOutput.clear()
             return
-        try:
-            with open(log_path, "r", encoding="utf-8") as f:
-                lines = f.readlines()
-        except OSError as e:
-            print(f"Could not read file: {e}")
-            return
+        if log_path.endswith(".log") or log_path.endswith(".txt"):
+            try:
+                with open(log_path, "r", encoding="utf-8") as f:
+                    lines = f.readlines()
+            except OSError as e:
+                print(f"Could not read file: {e}")
+                return
         original = "".join(f"[{line_no}] {line}" for line_no, line in enumerate(lines, 1))
         self.logViewOutput.setPlainText(original)
         try:
